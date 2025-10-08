@@ -36,7 +36,7 @@ if st.button("Analyze Sentiment"):
         sentiment = predict_sentiment(user_input)
         if sentiment == 'positive':
             st.success(f"Predicted Sentiment: {sentiment}")
-        elif sentiment == 'positive':
+        elif sentiment == 'negative':
             st.error(f"Predicted Sentiment: {sentiment}")
     else:
         st.warning("Please enter some text to analyze.")
