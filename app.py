@@ -34,6 +34,9 @@ user_input = st.text_area("Input Text", "")
 if st.button("Analyze Sentiment"):
     if user_input:
         sentiment = predict_sentiment(user_input)
-        st.success(f"Predicted Sentiment: {sentiment}")
+        if sentiment == 'positive':
+            st.success(f"Predicted Sentiment: {sentiment}")
+        elif sentiment == 'positive':
+            st.error(f"Predicted Sentiment: {sentiment}")
     else:
         st.warning("Please enter some text to analyze.")
